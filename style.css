@@ -1,0 +1,207 @@
+/* ---------- Base Styles ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(233, 220, 245);
+    overflow: hidden; /* stop scroll */
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    height: 50px;
+    background-color: rgb(32, 30, 30);
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    font-size: 32px;
+}
+
+/* ---------- Game Choices ---------- */
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 5vw; /* responsive spacing */
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    border-radius: 50%;
+    transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.choice:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/* ---------- Images ---------- */
+img {
+    width: 25vw;   /* each image 25% of viewport width */
+    height: 25vw;
+    max-width: 180px;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ---------- Scoreboard ---------- */
+.score-bord {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-size: 30px;
+    text-align: center;
+    height: 160px;
+}
+
+#user-score, #computer-score {
+    font-size: 40px;
+}
+
+/* ---------- Message ---------- */
+.msg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#msg {
+    background-color: rgb(32, 30, 30);
+    color: aliceblue;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* ---------- Selections ---------- */
+.selection {
+    color: rgb(32, 30, 30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    border-radius: 10px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.res-com {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.res-user {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+
+/* Small screens (phones, up to 600px) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+        height: 40px;
+    }
+
+    .choices {
+        gap: 4vw;
+        margin-top: 40px;
+    }
+
+    .choice, img {
+        width: 22vw;
+        height: 22vw;
+    }
+
+    .score-bord {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 18px;
+        height: auto;
+    }
+
+    #user-score, #computer-score {
+        font-size: 24px;
+    }
+
+    #msg {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    .selection, .res-user, .res-com {
+        margin: 8px;
+        font-size: 13px;
+    }
+}
+
+/* Medium screens (tablets, 601px–900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    h1 {
+        font-size: 26px;
+        height: 50px;
+    }
+
+    .choices {
+        gap: 20px;
+    }
+
+    .choice, img {
+        width: 20vw;
+        height: 20vw;
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .score-bord {
+        gap: 25px;
+        font-size: 24px;
+    }
+
+    #msg {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* Large screens (desktops, 901px and up) */
+@media (min-width: 901px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .choices {
+        gap: 50px;
+    }
+
+    .choice, img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #msg {
+        font-size: 18px;
+    }
+}
